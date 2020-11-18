@@ -9,7 +9,7 @@
             background-color: rgb(214, 206, 172);
         }
        
-        .result-chat {
+        .chats {
             height: 100px;
             width: 30%;
             background-color: cyan;
@@ -20,7 +20,7 @@
 </head>
 <body>
     <main>
-        <div class="result-chat"></div>
+        <div class="chats"></div>
         <div>
             <input type="text" class="input-chat">
             <button class="btn-chat">Kirim</button>
@@ -28,13 +28,13 @@
     </main>
 
     <script>
-        let resultChat = document.querySelector(".result-chat");
-        const inputChat = document.querySelector(".input-chat");
-        const btnChat = document.querySelector(".btn-chat");
+        let divChats = document.querySelector(".chats");
+        let inputChat = document.querySelector(".input-chat");
+        let btnChat = document.querySelector(".btn-chat");
         //console.log("btn-chat")
 
         btnChat.addEventListener("click", function() {
-            resultChat.innerHTML = resultChat.innerHTML + "<br>" + "Pesan :" + inputChat.value;
+            divChats.innerHTML = divChats.innerHTML + "<br>" + "Pesan :" + inputChat.value;
             inputChat.value = "";
         })
     </script>
