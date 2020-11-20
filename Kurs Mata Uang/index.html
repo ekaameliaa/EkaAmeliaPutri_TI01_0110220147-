@@ -11,7 +11,7 @@
       }
      </style>
 
-    <script>
+    <!-- <script>
       function hitung() {
         let n1 = Number(document.getElementById("nilai").value);
         let val = document.getElementById("values").value;
@@ -35,7 +35,7 @@
           document.getElementById("rupiah").value = n1 * 3592;
         }
       }
-    </script>
+    </script> -->
   </head>
   <body>
     <fieldset>
@@ -52,17 +52,43 @@
           </td>
           <td>
             <select id="values" onchange="hitung()">
-              <option value="dollar">Dollar US</option>
-              <option value="dollarsing">Dollar Singapore</option>
-              <option value="ringgit">Ringgit Malaysia</option>
-              <option value="yen">Yen Jepang</option>
+              <option value="du">Dollar US</option>
+              <option value="DS">Dollar Singapore</option>
+              <option value="RM">Ringgit Malaysia</option>
+              <option value="YJ">Yen Jepang</option>
               <option value="euro">Euro</option>
-              <option value="riyal">Riyal Arab Saudi</option>
+              <option value="RAS">Riyal Arab Saudi</option>
             </select>
           </td>
           <td><input type="text" id="rupiah" value="0" /></td>
         </tr>
       </table>
     </fieldset>
+
+    <script>
+      function hitung() {
+        let n1 = Number(document.getElementById("nilai").value);
+        let val = document.getElementById("values").value;
+
+        if (val === "DU") {
+          document.getElementById("rupiah").value = n1 * 9915;
+        } 
+        else if (val === "DS") {
+          document.getElementById("rupiah").value = n1 * 13472;
+        } 
+        else if (val === "RM") {
+          document.getElementById("rupiah").value = n1 * 874;
+        } 
+        else if (val === "YJ") {
+          document.getElementById("rupiah").value = n1 * 120;
+        } 
+        else if (val === "euro") {
+          document.getElementById("rupiah").value = n1 * 15888;
+        } 
+        else if (val === "RAS") {
+          document.getElementById("rupiah").value = n1 * 3592;
+        }
+      }
+     </script>
   </body>
 </html>
